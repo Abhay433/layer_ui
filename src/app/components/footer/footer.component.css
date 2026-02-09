@@ -10,6 +10,8 @@
   cursor: pointer;       /* Hand icon dikhane ke liye */
 }
 
+
+
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,6 +24,7 @@
 
 /* Brand Section */
 .footer-logo {
+  cursor: pointer;
   font-size: 30px; 
   font-weight: 900;
   letter-spacing: 2px;

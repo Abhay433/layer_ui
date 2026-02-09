@@ -19,5 +19,8 @@ export class LandingComponent implements AfterViewInit {
     video.play().catch((error:any) => {
       console.log("Video autoplay failed:", error);
     });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  
 }

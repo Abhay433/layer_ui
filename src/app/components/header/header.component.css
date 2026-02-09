@@ -74,6 +74,62 @@
   .nav-links a:hover::after {
     width: 100%;
   }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    position: relative;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer; /* pointer hover effect */
+    padding: 5px 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Hide dropdown initially */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* just below parent link */
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-width: 180px; /* optional */
+    z-index: 100;
+  }
+  
+  /* Dropdown items */
+  .dropdown-menu li {
+    padding: 10px 20px;
+  }
+  
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Show dropdown ONLY when hovering the link text */
+  .dropdown > a:hover + .dropdown-menu,
+  .dropdown-menu:hover {
+    display: block;
+  }
+  
+  /* Optional: background change on hover */
+  .dropdown-menu li a:hover {
+    background: #f0f0f0;
+  }
+  
   
   /* Responsive (Mobile) */
   @media (max-width: 768px) {

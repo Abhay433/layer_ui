@@ -1,14 +1,24 @@
 <header class="navbar" [class.hide]="isHidden">
   <div class="container">
-    <div class="logo">LAYERZERO</div>
+    <div class="logo" (click)="goHome()">LAYERZERO</div>
 
     <nav class="nav-links">
       <a href="#">Home</a>
       <a href="#features">Features</a>
-      <a href="#industries">Industries</a>
+      <div class="dropdown">
+        <a href="#industries-section">Industries</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/industries/mining">Mining</a></li>
+          <li><a routerLink="/industries/defence">Defence</a></li>
+          <li><a routerLink="/industries/disaster-management">Disaster Management</a></li>
+          <li><a routerLink="/industries/agriculture">Agriculture</a></li>
+          <li><a routerLink="/industries/environmental-sustainability">Sustainability</a></li>
+          <li><a routerLink="/industries/oil-gas">Oil & Gas</a></li>
+        </ul>
+      </div>
       <a href="#">Workflow</a>
-      <a href="#">About</a>
-      <a href="#">How We Work</a>
+      <a routerLink="/about-us">About Us</a>
+      <a routerLink="/how-we-work">how-we-work</a>
     </nav>
   </div>
 </header>

@@ -21,7 +21,7 @@
   }
   
   .industry-card {
-    background: #f8fafc;
+    background: rgba(255, 255, 255, 0.6);
     border: 1px solid #e2e8f0;
     border-radius: 15px;
     padding: 40px 30px;

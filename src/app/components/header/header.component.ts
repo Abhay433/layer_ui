@@ -1,15 +1,18 @@
 import { Component, HostListener } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   isHidden = false;
   private lastScrollTop = 0;
+
+  constructor(private router: Router) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -31,6 +34,20 @@ export class HeaderComponent {
     }
 
     this.lastScrollTop = currentScroll;
+  }
+
+  goHome() {
+    this.router.navigate(['/']).then(() => {
+      window.scrollTo(0, 0); // turant top
+    });
+  }
+
+  // Section links click -> instant jump
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'auto' }); // turant jump
+    }
   }
   
 }
