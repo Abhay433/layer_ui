@@ -1,0 +1,8 @@
+<section class="partners-section" id="partners">
+    <h2 class="section-title">OUR PARTNERS</h2>
+    <div class="partners-container">
+      <div class="partner-logo" *ngForm="let p of partners">
+        <img [src]="p.logo" [alt]="p.name">
+      </div>
+    </div>
+  </section>

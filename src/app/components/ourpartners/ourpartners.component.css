@@ -1,0 +1,35 @@
+.partners-section {
+    padding: 80px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #64748b;
+    margin-bottom: 50px;
+  }
+  
+  .partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .partner-logo img {
+    height: 50px; /* Logo height fix */
+    width: auto;
+    filter: grayscale(100%); /* Shuru mein black & white */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+  }
+  
+  .partner-logo img:hover {
+    filter: grayscale(0%); /* Hover par color (agar real logo color ho) */
+    opacity: 1;
+    transform: scale(1.1);
+  }

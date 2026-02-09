@@ -1,0 +1,16 @@
+<section class="industries-section">
+    <h2 class="section-main-heading">INDUSTRIES</h2>
+    
+    <div class="industries-grid">
+      <div class="industry-card" *ngFor="let item of industries">
+        <div class="card-content">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.description }}</p>
+          
+          <a [routerLink]="item.route" class="explore-btn">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>

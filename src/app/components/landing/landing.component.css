@@ -1,0 +1,185 @@
+.hero {
+    min-height: 80vh;
+    /* background: linear-gradient(
+        rgba(229, 229, 229, 0.9),
+        rgba(229, 229, 229, 0.9)
+      ),
+      url('/assets/hero-bg.jpg'); */
+    background: #d6d6d6;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;     /* ⬅️ change this */
+    padding: 10px 24px 10px;  /*⬅️ more top space, less bottom */
+    flex-direction: column;    /* Items ko ek ke niche ek lane ke liye */
+    align-items: center;       /* Horizontal center karne ke liye */
+    text-align: center;        /* Text ko center karne ke liye */
+    /* padding: 60px 24px; */
+  }
+  
+  .hero-container {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    
+  }
+
+  /* .video-wrapper {
+    max-width: 600px;         /* "Perfect size" ke liye width thodi control ki hai */
+    /* width: 90%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15); /* Soft shadow for premium look */
+    /* line-height: 0;            /* Video ke niche extra space hatane ke liye */
+  /* }  */
+  
+  .geospatial-video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero-title {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+    margin-bottom: 16px;
+  }
+  
+  .hero-title span {
+    color: #184f35; /* LayerZero green */
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #303d50;
+    max-width: 785px;
+    margin-bottom: 32px;
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .btn.primary {
+    background: #184f35;
+    color: #ffffff;
+  }
+  
+  .btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(24, 79, 53, 0.35);
+  }
+  
+  .btn.secondary {
+    border: 1px solid #184f35;
+    color: #184f35;
+    background: transparent;
+  }
+  
+  .btn.secondary:hover {
+    background: #184f35;
+    color: #ffffff;
+  }
+
+  .video-section {
+    width: 100%; 
+    padding: 40px 0; /* Hero aur video ke beech thoda gap */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-wrapper {
+    max-width: 1200px; /* Container width se match karne ke liye */
+    width: 90%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+  
+  .geospatial-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Video container ko fill karegi */
+  }
+
+  /* Cards ka main container */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Video ki width se match karne ke liye */
+  margin: 40px auto 0; /* Video se gap dene ke liye */
+  padding: 0 20px;
+}
+
+/* Individual Card Design */
+.feature-card {
+  background: #2d2d2d; /* Dark grey background jaisa image mein hai */
+  padding: 30px;
+  border-radius: 20px; /* Rounded corners */
+  color: #ffffff;
+  text-align: left;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+/* Card ke andar ka Content */
+.feature-card .icon {
+  font-size: 24px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b0b0b0; /* Light grey text for description */
+}
+
+/* Mobile responsive adjustment */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* Mobile par ek ke niche ek */
+  }
+}
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 60px 16px;
+    }
+  
+    .hero-actions {
+      justify-content: center;
+    }
+  
+    .hero-container {
+      text-align: center;
+    }
+  }
+  

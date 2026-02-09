@@ -1,0 +1,91 @@
+/* Navbar Wrapper */
+.navbar {
+  width: 100%;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+  .navbar.hide {
+  transform: translateY(-100%);
+  }
+  .navbar {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #184f35; /* dark green */
+    cursor: pointer;
+  }
+  
+  /* Nav Links */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #1f2933; /* dark text */
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
+  }
+  
+  /* Hover underline effect */
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #184f35;
+    transition: width 0.25s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #184f35;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Responsive (Mobile) */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+  

@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { LandingComponent } from './components/landing/landing.component';
+import { FeaturesComponent } from './components/features/features.component';
+import { IndustriesComponent } from './components/industries/industries.component';
+import { OurpartnersComponent } from './components/ourpartners/ourpartners.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule, // <--- Ye sabse important hai
+    HeaderComponent,
+    FooterComponent,
+],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'layer_ui';
-}
+export class AppComponent {}
