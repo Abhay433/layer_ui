@@ -8,9 +8,13 @@ import { EnvironmentalSustainabilityComponent } from './pages/industries/environ
 import { OilGasComponent } from './pages/industries/oil-gas/oil-gas.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { HowweworkComponent } from './components/howwework/howwework.component';
+import { IndustriesComponent } from './components/industries/industries.component';
 
 
 export const routes: Routes = [
+
+  { path: 'industries', component: IndustriesComponent },
+
   // Jab URL khali ho, toh pura home page load hoga
   { path: '', component: HomeComponent }, 
   { path: 'about-us', component: AboutusComponent },

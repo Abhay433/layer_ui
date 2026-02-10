@@ -1,0 +1,158 @@
+/* ====== ENVIRONMENT & SUSTAINABILITY PAGE ====== */
+
+.environment-page {
+    padding-top: 140px;
+    min-height: 160vh;
+    background: radial-gradient(ellipse at top, #0f1b2d 0%, #0b0f1a 65%);
+    color: #ffffff;
+  }
+  
+  /* HERO */
+  .environment-page .hero {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+  
+  .environment-page .hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    background: linear-gradient(90deg, #42e695, #3bb2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .environment-page .hero p {
+    font-size: 18px;
+    color: #cbd5e1;
+    line-height: 1.7;
+  }
+  
+  /* OVERVIEW GRID (4 CARDS) */
+  .environment-page .overview {
+    max-width: 1200px;
+    margin: 0 auto 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 0 20px;
+  }
+  
+  .environment-page .card {
+    background: linear-gradient(180deg, rgba(66,230,149,0.15), rgba(59,178,255,0.08));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 28px 24px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+    min-height: 180px;
+  }
+  
+  .environment-page .card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(59,178,255,0.2);
+  }
+  
+  .environment-page .card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #7dd3fc;
+  }
+  
+  .environment-page .card p {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.6;
+  }
+  
+  /* WORKFLOWS */
+  .environment-page .workflows {
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .environment-page .workflows h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #7dd3fc;
+  }
+  
+  .environment-page .workflows ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 24px;
+  }
+  
+  .environment-page .workflows li {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #e5e7eb;
+  }
+  
+  /* CTA */
+  .environment-page .cta {
+    text-align: center;
+    padding-bottom: 100px;
+  }
+  
+  .environment-page .btn-primary,
+  .environment-page .btn-secondary {
+    border: none;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 8px;
+    transition: all 0.25s ease;
+  }
+  
+  .environment-page .btn-primary {
+    background: linear-gradient(90deg, #42e695, #3bb2ff);
+    color: #0b0f1a;
+    font-weight: 600;
+  }
+  
+  .environment-page .btn-secondary {
+    background: transparent;
+    border: 1px solid #3bb2ff;
+    color: #7dd3fc;
+  }
+  
+  .environment-page .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(66,230,149,0.35);
+  }
+  
+  .environment-page .btn-secondary:hover {
+    background: rgba(59,178,255,0.1);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .environment-page .overview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .environment-page .hero h1 {
+      font-size: 34px;
+    }
+  
+    .environment-page .overview {
+      grid-template-columns: 1fr;
+    }
+  
+    .environment-page .workflows ul {
+      grid-template-columns: 1fr;
+    }
+  }
+  
