@@ -21,4 +21,9 @@ export class OilGasComponent {
     });
  }
 
+ goToUsecase(path: string) {
+  // Ye URL ko industries/mining/usecase1 (ya 2, 3) par redirect karega
+  this.router.navigate(['industries/oil-gas', path]);
+ }
+
 }

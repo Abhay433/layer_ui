@@ -21,4 +21,9 @@ export class AgricultureComponent {
     });
  }
 
+ goToUsecase(path: string) {
+  // Ye URL ko industries/mining/usecase1 (ya 2, 3) par redirect karega
+  this.router.navigate(['industries/agriculture', path]);
+ }
+
 }
