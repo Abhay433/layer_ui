@@ -1,62 +1,67 @@
-<div class="agriculture-page industry-page">
+<div class="agriculture-page">
+  <div class="container">
 
     <!-- HERO SECTION -->
     <section class="hero">
-      <h1>Agriculture & Precision Farming</h1>
-      <p>
+      <h1 class="section-title">
+        Agriculture & <span class="highlight">Precision Farming</span>
+      </h1>
+      <p class="section-subtitle">
         Modern agriculture requires data-driven insights to improve yield, reduce risk,
         and ensure sustainable farming practices. Our geospatial AI platform empowers
         smarter farming decisions.
       </p>
     </section>
-  
+
     <!-- APPLICATIONS OVERVIEW (3 CARDS) -->
-    <section class="overview three-cols">
+    <section class="overview card-grid">
       <div class="card">
         <h3>Crop Health Monitoring</h3>
         <p>
           Monitor crop stress, disease, and growth stages using satellite and drone imagery.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase1')">Explore</button> 
+        <button class="primary-btn" (click)="goToUsecase('usecase1')">Explore</button>
       </div>
-  
+
       <div class="card">
         <h3>Soil & Moisture Analytics</h3>
         <p>
           Analyze soil health, moisture levels, and nutrient distribution for optimized irrigation.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase2')">Explore</button> 
+        <button class="primary-btn" (click)="goToUsecase('usecase2')">Explore</button>
       </div>
-  
+
       <div class="card">
         <h3>Yield Forecasting</h3>
         <p>
           Predict crop yield and harvest timelines using historical and real-time geospatial data.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase3')">Explore</button> 
+        <button class="primary-btn" (click)="goToUsecase('usecase3')">Explore</button>
       </div>
     </section>
-  
-    <!-- WORKFLOWS OVERVIEW (3 ITEMS) -->
-    <section class="workflows">
-      <h2>Applications & Workflows</h2>
-  
-      <ul class="three-cols-list">
+
+    <!-- WORKFLOWS OVERVIEW -->
+    <section class="workflows soft-box">
+      <h2 class="section-title" style="font-size: 36px; text-align:left;">
+        Applications & <span class="highlight">Workflows</span>
+      </h2>
+
+      <ul class="workflow-list">
         <li>Crop stress & disease detection</li>
         <li>Precision irrigation planning</li>
         <li>Yield prediction & harvest planning</li>
       </ul>
     </section>
-  
+
     <!-- CTA SECTION -->
     <section class="cta">
-      <button class="btn-secondary" (click)="goToIndustries()">
+      <button class="secondary-btn" (click)="goToIndustries()">
         Explore Other Industries
       </button>
-      <button class="btn-primary" (click)="goToHowWeWork()">
+      <button class="primary-btn" (click)="goToHowWeWork()">
         Want to work with Lizo AI?
       </button>
     </section>
-  
+
   </div>
-  
+</div>

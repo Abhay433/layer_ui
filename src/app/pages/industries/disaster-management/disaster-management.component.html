@@ -1,53 +1,56 @@
-<div class="disaster-page industry-page">
+<div class="disaster-page section">
+  <div class="container">
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <h1>Disaster Management & Response</h1>
-      <p>
+    <!-- HERO -->
+    <section class="hero inner-hero">
+      <h1 class="section-title">
+        Disaster <span class="highlight">Management & Response</span>
+      </h1>
+      <p class="section-subtitle">
         Rapid response and situational awareness are critical during disasters.
         Our AI-powered geospatial intelligence enables early warning and rapid damage assessment
         for resilient communities.
       </p>
     </section>
-  
+
     <!-- APPLICATIONS OVERVIEW (2 CARDS) -->
-    <section class="overview two-cols">
-      <div class="card">
+    <section class="overview light-overview two-cols">
+      <div class="soft-card">
         <h3>Early Warning Systems</h3>
         <p>
           Predict floods, landslides, wildfires, and cyclones using satellite data and AI models.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase1')">Explore</button>
+        <button class="ghost-btn" (click)="goToUsecase('usecase1')">Explore</button>
       </div>
-  
-      <div class="card">
+
+      <div class="soft-card">
         <h3>Damage Assessment</h3>
         <p>
           Rapid post-disaster assessment using before-after imagery and automated change detection.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase2')">Explore</button> 
+        <button class="ghost-btn" (click)="goToUsecase('usecase2')">Explore</button>
       </div>
     </section>
-  
-    <!-- WORKFLOWS OVERVIEW (2 ITEMS) -->
-    <section class="workflows">
-      <h2>Applications & Workflows</h2>
-  
-      <ul class="two-cols-list">
+
+    <!-- WORKFLOWS -->
+    <section class="soft-box">
+      <h2 class="section-mini-title">Applications & Workflows</h2>
+
+      <ul class="workflow-list two-cols-list">
         <li>Flood & cyclone risk mapping</li>
         <li>Evacuation route planning</li>
       </ul>
     </section>
-  
-    <!-- CTA SECTION -->
+
+    <!-- CTA -->
     <section class="cta">
-      <button class="btn-secondary" (click)="goToIndustries()">
+      <button class="secondary-btn" (click)="goToIndustries()">
         Explore Other Industries
       </button>
-      <button class="btn-primary" (click)="goToHowWeWork()">
+      <button class="primary-btn" (click)="goToHowWeWork()">
         Want to work with Lizo AI?
       </button>
     </section>
-  
+
   </div>
-  
+</div>

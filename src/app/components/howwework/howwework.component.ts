@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SupabaseService } from '../../services/supabase.service';
 
 @Component({
   selector: 'app-howwework',
@@ -10,25 +12,44 @@ import { FormsModule } from '@angular/forms';
 })
 export class HowweworkComponent {
 
+  constructor(private router: Router, private supabaseService: SupabaseService) {}
+
+  // Purane HTML ke hisaab se fields
   form = {
-    name: '',
+    full_name: '',
     email: '',
     company: '',
     message: ''
   };
 
-  submitForm() {
-    console.log('Form Data:', this.form);
+  async onSubmit(contactForm: any) {
+    console.log('Form submitting:', this.form);
 
-    alert('Thanks! We will contact you soon 🚀');
+    const { data, error } = await this.supabaseService.saveContact(this.form);
 
-    // Reset form
-    this.form = {
-      name: '',
-      email: '',
-      company: '',
-      message: ''
-    };
+    if (error) {
+      console.error('Database error:', error.message);
+      
+      // Professional Error Handling
+      if (error.message.includes('unique_email')) {
+        alert('This email has already been submitted. Our team will get back to you soon.');
+      } else {
+        alert('We encountered a technical issue while saving your details. Please try again later.');
+      }
+    } else {
+      // Professional Success Message
+      alert('Thank you for reaching out! Your message has been successfully received. Our team will contact you shortly. 🚀');
+      
+      // Form reset logic
+      contactForm.resetForm(); 
+      this.form = { full_name: '', email: '', company: '', message: '' };
+    }
+  }
+
+  
+  
+  goToIndustries() {
+    this.router.navigate(['/'], { fragment: 'industries-section' });
   }
 
 }

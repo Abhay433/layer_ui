@@ -35,13 +35,13 @@
         </p>
       </div>
   
-      <div class="step">
+      <!-- <div class="step">
         <h3>4. Platform Integration</h3>
         <p>
           Solutions are integrated into dashboards, APIs, or workflows
           that your team can use easily.
         </p>
-      </div>
+      </div> -->
     </section>
   
     <!-- WORKFLOW DETAILS -->
@@ -58,8 +58,8 @@
   
     <!-- CTA -->
     <section class="cta">
-      <button class="btn-secondary" routerLink="/industries">
-        Explore Industries
+      <button class="btn-secondary" (click)="goToIndustries()">
+        Explore Other Industries
       </button>
   
       <!-- <button class="btn-primary">
@@ -67,49 +67,39 @@
       </button> -->
     </section>
 
-    <div class="contact-page">
+    <div class="contact-card-dark" id="contact">
+      <h3>Let's Build Something Great</h3>
+    
+      <form (ngSubmit)="contactForm.form.valid && onSubmit(contactForm)" #contactForm="ngForm">
+    
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" placeholder="E.g. Steve Rogers" [(ngModel)]="form.full_name" required #nameRef="ngModel">
+            <small *ngIf="nameRef.invalid && contactForm.submitted" class="error-text">Name is required</small>
+          </div>
+    
+          <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" name="company" placeholder="E.g. Stark Industries" [(ngModel)]="form.company" [(ngModel)]="form.company">
+          </div>
+        </div>
+    
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="steve@company.com" [(ngModel)]="form.email" required email #emailRef="ngModel">
+          <small *ngIf="emailRef.invalid && contactForm.submitted" class="error-text">Please enter a valid business email</small>
+        </div>
+    
+        <div class="form-group">
+          <label>How can we help you?</label>
+          <textarea name="message" rows="4" placeholder="Tell us about your project or use case..." [(ngModel)]="form.message" required #msgRef="ngModel"></textarea>
+          <small *ngIf="msgRef.invalid && contactForm.submitted" class="error-text">Please share some details about your requirement</small>
+        </div>
+    
+        <button type="submit" [disabled]="contactForm.invalid" class="submit-btn-gradient">Send Message 🚀</button>
+      </form>
+    </div>  
+</div>
 
-        <!-- HERO -->
-        <section class="hero">
-          <h1>Contact Us</h1>
-          <p>
-            Have a project in mind? Tell us about your use case and our team will get back to you.
-          </p>
-        </section>
-      
-        <!-- FORM -->
-        <section class="contact-form-section">
-          <form class="contact-form" (ngSubmit)="submitForm()" #contactForm="ngForm">
-      
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" name="name" [(ngModel)]="form.name" required />
-            </div>
-      
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" name="email" [(ngModel)]="form.email" required />
-            </div>
-      
-            <div class="form-group">
-              <label>Company / Organization</label>
-              <input type="text" name="company" [(ngModel)]="form.company" />
-            </div>
-      
-            <div class="form-group">
-              <label>Message</label>
-              <textarea rows="5" name="message" [(ngModel)]="form.message" required></textarea>
-            </div>
-      
-            <button class="btn-primary" type="submit" [disabled]="!contactForm.valid">
-              Send Message
-            </button>
-      
-          </form>
-        </section>
-      
-      </div>
-      
-  
-  </div>
   
