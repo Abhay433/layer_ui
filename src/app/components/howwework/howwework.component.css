@@ -181,6 +181,15 @@
   filter: grayscale(1);
 }
 
+.form-group input[type="text"], 
+.form-group input[name="full_name"], 
+.form-group input[name="company"] {
+  text-transform: capitalize !important;
+}
+input[name="email"] {
+  text-transform: lowercase;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .form-row {

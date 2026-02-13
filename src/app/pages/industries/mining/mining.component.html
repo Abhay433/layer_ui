@@ -1,64 +1,67 @@
-<div class="mining-page">
+<div class="agriculture-page">
+  <div class="container">
+
     <!-- HERO SECTION -->
     <section class="hero">
-      <h1>Mining Industry Solutions</h1>
-      <p>
-        Mining is critical for modern infrastructure, energy transition, and economic growth.
-        Our AI-powered geospatial solutions help optimize operations, safety, and sustainability.
+      <h1 class="section-title">
+        Mining & <span class="highlight">Precision Farming</span>
+      </h1>
+      <p class="section-subtitle">
+        Modern agriculture requires data-driven insights to improve yield, reduce risk,
+        and ensure sustainable farming practices. Our geospatial AI platform empowers
+        smarter farming decisions.
       </p>
     </section>
-  
+
     <!-- APPLICATIONS OVERVIEW (3 CARDS) -->
-    <section class="overview">
-      
+    <section class="overview card-grid">
       <div class="card">
-        <h3>Exploration Intelligence</h3>
+        <h3>Crop Health Monitoring</h3>
         <p>
-          AI-driven geological mapping and mineral prospectivity analysis to identify high-potential zones.
+          Monitor crop stress, disease, and growth stages using satellite and drone imagery.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase1')">Explore</button>      </div>
-  
+        <button class="primary-btn" (click)="goToUsecase('usecase1')">Explore</button>
+      </div>
+
       <div class="card">
-        <h3>Operational Optimization</h3>
+        <h3>Soil & Moisture Analytics</h3>
         <p>
-          Optimize mine planning, haulage routes, and resource extraction using spatial analytics.
+          Analyze soil health, moisture levels, and nutrient distribution for optimized irrigation.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase2')">Explore</button>      </div>
-  
+        <button class="primary-btn" (click)="goToUsecase('usecase2')">Explore</button>
+      </div>
+
       <div class="card">
-        <h3>Safety & Risk Monitoring</h3>
+        <h3>Geological Mapping</h3>
         <p>
-          Monitor slope stability, subsidence risks, and hazardous zones using satellite and sensor data.
+          Generate accurate geological maps using remote sensing, GIS, and AI to identify mineral zones, and subsurface structures.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase3')">Explore</button>      </div>
+        <button class="primary-btn" (click)="goToUsecase('usecase3')">Explore</button>
+      </div>
     </section>
-  
-    <!-- DETAILED WORKFLOWS -->
-    <section class="workflows">
-      <h2>Applications & Workflows</h2>
-  
-      <ul>
-        <li>Remote sensing based mineral targeting</li>
-        <li>Terrain & slope stability assessment</li>
-        <li>Mine site planning & optimization</li>
-        <li>Environmental impact monitoring</li>
-        <li>Tailings dam risk analysis</li>
+
+    <!-- WORKFLOWS OVERVIEW -->
+    <section class="workflows soft-box">
+      <h2 class="section-title" style="font-size: 36px; text-align:left;">
+        Applications & <span class="highlight">Workflows</span>
+      </h2>
+
+      <ul class="workflow-list">
+        <li>Crop stress & disease detection</li>
+        <li>Precision irrigation planning</li>
+        <li>Yield prediction & harvest planning</li>
       </ul>
     </section>
-  
+
     <!-- CTA SECTION -->
     <section class="cta">
-      <!-- <button class="btn-secondary" (click)="goToIndustries()">
-        Explore Other Industries
-      </button> -->
-      <button class="btn-secondary" (click)="goToIndustries()">
+      <button class="secondary-btn" (click)="goToIndustries()">
         Explore Other Industries
       </button>
-      
-      <button class="btn-primary" (click)="goToHowWeWork()">
+      <button class="primary-btn" (click)="goToHowWeWork()">
         Want to work with Lizo AI?
       </button>
     </section>
-  
+
   </div>
-  
+</div>

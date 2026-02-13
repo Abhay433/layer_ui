@@ -1,48 +1,59 @@
-<div class="disaster-page section">
+<div class="agriculture-page">
   <div class="container">
 
-    <!-- HERO -->
-    <section class="hero inner-hero">
+    <!-- HERO SECTION -->
+    <section class="hero">
       <h1 class="section-title">
-        Disaster <span class="highlight">Management & Response</span>
+        Agriculture & <span class="highlight">Precision Farming</span>
       </h1>
       <p class="section-subtitle">
-        Rapid response and situational awareness are critical during disasters.
-        Our AI-powered geospatial intelligence enables early warning and rapid damage assessment
-        for resilient communities.
+        Modern agriculture requires data-driven insights to improve yield, reduce risk,
+        and ensure sustainable farming practices. Our geospatial AI platform empowers
+        smarter farming decisions.
       </p>
     </section>
 
-    <!-- APPLICATIONS OVERVIEW (2 CARDS) -->
-    <section class="overview light-overview two-cols">
-      <div class="soft-card">
-        <h3>Early Warning Systems</h3>
+    <!-- APPLICATIONS OVERVIEW (3 CARDS) -->
+    <section class="overview card-grid">
+      <div class="card">
+        <h3>Crop Health Monitoring</h3>
         <p>
-          Predict floods, landslides, wildfires, and cyclones using satellite data and AI models.
+          Monitor crop stress, disease, and growth stages using satellite and drone imagery.
         </p>
-        <button class="ghost-btn" (click)="goToUsecase('usecase1')">Explore</button>
+        <button class="primary-btn" (click)="goToUsecase('usecase1')">Explore</button>
       </div>
 
-      <div class="soft-card">
-        <h3>Damage Assessment</h3>
+      <div class="card">
+        <h3>Soil & Moisture Analytics</h3>
         <p>
-          Rapid post-disaster assessment using before-after imagery and automated change detection.
+          Analyze soil health, moisture levels, and nutrient distribution for optimized irrigation.
         </p>
-        <button class="ghost-btn" (click)="goToUsecase('usecase2')">Explore</button>
+        <button class="primary-btn" (click)="goToUsecase('usecase2')">Explore</button>
+      </div>
+
+      <div class="card">
+        <h3>Yield Forecasting</h3>
+        <p>
+          Predict crop yield and harvest timelines using historical and real-time geospatial data.
+        </p>
+        <button class="primary-btn" (click)="goToUsecase('usecase3')">Explore</button>
       </div>
     </section>
 
-    <!-- WORKFLOWS -->
-    <section class="soft-box">
-      <h2 class="section-mini-title">Applications & Workflows</h2>
+    <!-- WORKFLOWS OVERVIEW -->
+    <section class="workflows soft-box">
+      <h2 class="section-title" style="font-size: 36px; text-align:left;">
+        Applications & <span class="highlight">Workflows</span>
+      </h2>
 
-      <ul class="workflow-list two-cols-list">
-        <li>Flood & cyclone risk mapping</li>
-        <li>Evacuation route planning</li>
+      <ul class="workflow-list">
+        <li>Crop stress & disease detection</li>
+        <li>Precision irrigation planning</li>
+        <li>Yield prediction & harvest planning</li>
       </ul>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA SECTION -->
     <section class="cta">
       <button class="secondary-btn" (click)="goToIndustries()">
         Explore Other Industries

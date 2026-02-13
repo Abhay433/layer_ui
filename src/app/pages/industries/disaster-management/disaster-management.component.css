@@ -1,42 +1,21 @@
 /* PAGE WRAPPER */
-.disaster-page {
+.agriculture-page {
   background: transparent; /* Global bg use ho raha */
-  padding: 120px 20px 140px;
 }
 
 /* HERO */
-.disaster-page .hero {
+.hero {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 24px;
   padding: 72px 56px;
   text-align: center;
   border: 1px solid var(--border-soft);
+  margin-top: 50px;
 }
 
-/* OVERVIEW GRID – same system as Agriculture (global grid) */
-.light-overview {
-  max-width: 1100px;
-  margin: 60px auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
-
-/* SOFT CARDS – same feel as Agriculture boxes */
-.soft-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid var(--border-soft);
-  border-radius: 24px;
-  padding: 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.25s ease;
-}
-
-.soft-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+/* OVERVIEW GRID – global .card-grid use ho raha */
+.overview .primary-btn {
+  margin-top: 20px;
 }
 
 /* WORKFLOWS BOX */
@@ -48,23 +27,20 @@
   border: 1px solid var(--border-soft);
 }
 
-/* TWO COLUMN LIST (same as Agriculture workflow list vibe) */
-.two-cols-list {
+.workflow-list {
   list-style: none;
   padding: 0;
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 24px;
 }
 
-.two-cols-list li {
+.workflow-list li {
   padding-left: 20px;
+  margin-bottom: 12px;
   color: var(--text-muted);
   position: relative;
 }
 
-.two-cols-list li::before {
+.workflow-list li::before {
   content: "▹";
   position: absolute;
   left: 0;
@@ -72,54 +48,38 @@
   font-weight: bold;
 }
 
-/* EXPLORE BUTTON (same as Agriculture primary ghost feel) */
-.ghost-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: rgba(22, 163, 74, 0.08);
-  border: 1px solid rgba(22, 163, 74, 0.35);
-  color: var(--brand-green);
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.25s ease;
-  width: fit-content;
-}
-
-.ghost-btn:hover {
-  background: var(--brand-green);
-  color: #fff;
-}
-
 /* CTA */
-.disaster-page .cta {
+.cta {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
   gap: 16px;
 }
 
+.secondary-btn {
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1px solid var(--text-dark);
+  background: transparent;
+  color: var(--text-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.secondary-btn:hover {
+  background: var(--text-dark);
+  color: #fff;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .disaster-page .hero {
+  .hero {
     padding: 48px 24px;
   }
 
-  .light-overview,
-  .two-cols-list {
-    grid-template-columns: 1fr;
-  }
-
-  .soft-box {
-    padding: 36px 24px;
-  }
-
-  .disaster-page .cta {
+  .cta {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .disaster-page {
-    padding: 100px 16px 120px;
   }
 }

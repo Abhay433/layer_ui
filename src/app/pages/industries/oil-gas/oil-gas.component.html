@@ -1,71 +1,75 @@
-<div class="oilgas-page industry-page">
+<div class="agriculture-page">
+  <div class="container">
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero">
-      <h1>Oil & Gas Industry Solutions</h1>
-      <p>
-        AI-powered geospatial intelligence improves exploration success, asset monitoring,
-        pipeline safety, and environmental compliance across the oil & gas value chain.
+      <h1 class="section-title">
+        Agriculture & <span class="highlight">Precision Farming</span>
+      </h1>
+      <p class="section-subtitle">
+        Modern agriculture requires data-driven insights to improve yield, reduce risk,
+        and ensure sustainable farming practices. Our geospatial AI platform empowers
+        smarter farming decisions.
       </p>
     </section>
-  
-    <!-- OVERVIEW (4 CARDS) -->
-    <section class="overview four-grid">
+
+    <!-- APPLICATIONS OVERVIEW (3 CARDS) -->
+    <section class="overview card-grid">
       <div class="card">
-        <h3>Exploration & Prospecting</h3>
+        <h3>Crop Health Monitoring</h3>
         <p>
-          Identify high-potential hydrocarbon zones using AI-driven seismic interpretation
-          and satellite data.
+          Monitor crop stress, disease, and growth stages using satellite and drone imagery.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase1')">Explore</button>  
+        <button class="primary-btn" (click)="goToUsecase('usecase1')">Explore</button>
       </div>
-  
+
       <div class="card">
-        <h3>Asset Monitoring</h3>
+        <h3>Soil & Moisture Analytics</h3>
         <p>
-          Monitor rigs, refineries, and field assets using real-time spatial intelligence.
+          Analyze soil health, moisture levels, and nutrient distribution for optimized irrigation.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase2')">Explore</button>  
+        <button class="primary-btn" (click)="goToUsecase('usecase2')">Explore</button>
       </div>
-  
+
       <div class="card">
-        <h3>Pipeline Safety</h3>
+        <h3>Yield Forecasting</h3>
         <p>
-          Detect leak risks, ground movement, and encroachment along pipeline corridors.
+          Predict crop yield and harvest timelines using historical and real-time geospatial data.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase3')">Explore</button>  
+        <button class="primary-btn" (click)="goToUsecase('usecase3')">Explore</button>
       </div>
-  
+
       <div class="card">
-        <h3>Environmental Compliance</h3>
+        <h3>Yield Forecasting</h3>
         <p>
-          Track emissions, spills, and environmental impact to meet ESG & regulatory standards.
+          Predict crop yield and harvest timelines using historical and real-time geospatial data.
         </p>
-        <button class="explore-btn" (click)="goToUsecase('usecase4')">Explore</button>  
+        <button class="primary-btn" (click)="goToUsecase('usecase3')">Explore</button>
       </div>
     </section>
-  
-    <!-- WORKFLOWS -->
-    <section class="workflows">
-      <h2>Applications & Workflows</h2>
-      <ul>
-        <li>Seismic interpretation & prospect ranking</li>
-        <li>Pipeline corridor monitoring & leak detection</li>
-        <li>Asset inspection using satellite & drone data</li>
-        <li>Environmental impact & spill detection</li>
-        <li>Regulatory compliance & ESG reporting</li>
+
+    <!-- WORKFLOWS OVERVIEW -->
+    <section class="workflows soft-box">
+      <h2 class="section-title" style="font-size: 36px; text-align:left;">
+        Applications & <span class="highlight">Workflows</span>
+      </h2>
+
+      <ul class="workflow-list">
+        <li>Crop stress & disease detection</li>
+        <li>Precision irrigation planning</li>
+        <li>Yield prediction & harvest planning</li>
       </ul>
     </section>
-  
-    <!-- CTA -->
+
+    <!-- CTA SECTION -->
     <section class="cta">
-      <button class="btn-secondary" (click)="goToIndustries()">
+      <button class="secondary-btn" (click)="goToIndustries()">
         Explore Other Industries
       </button>
-      <button class="btn-primary" (click)="goToHowWeWork()">
+      <button class="primary-btn" (click)="goToHowWeWork()">
         Want to work with Lizo AI?
       </button>
     </section>
-  
+
   </div>
-  
+</div>

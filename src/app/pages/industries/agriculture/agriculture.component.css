@@ -10,6 +10,7 @@
   padding: 72px 56px;
   text-align: center;
   border: 1px solid var(--border-soft);
+  margin-top: 50px;
 }
 
 /* OVERVIEW GRID – global .card-grid use ho raha */
