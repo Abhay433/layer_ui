@@ -1,0 +1,132 @@
+<div class="agricultural-page">
+  <section class="hero">
+    <button (click)="goBack()" class="back-link"> ← Back to Mining Overview</button>
+    <h1> Real-Time Multibeam & Backscatter Processing</h1>
+    <!-- <p>AI-driven geological mapping and mineral prospectivity analysis.</p> -->
+  </section>
+
+  <section class="content-box">
+    <div class="workflow-overview">
+      <h2>Workflow Overview</h2>
+      <p>LizoAI streamlines maritime operations by generating clean, gridded bathymetry and backscatter products in real-time during data acquisition.
+         By providing immediate seabed insights and automated quality control, the platform enables survey teams to make informed, data-driven decisions while 
+         still at sea.</p>
+    </div>
+  </section>
+
+  <div class="flex-row">
+    <div class="video-section">
+      <div class="placeholder-video">
+        <span>[ Video of Workflow ]</span>
+      </div>
+    </div>
+    <!-- <div class="summary-section">
+      <h3>Summarised Workflow</h3>
+      <ul>
+        <li>Data acquisition from Sentinel-2 & Landsat-8.</li>
+        <li>Atmospheric correction and noise removal.</li>
+        <li>Mineral spectral signature matching.</li>
+        <li>Anomaly detection using Deep Learning.</li>
+      </ul>
+    </div> -->
+  </div>
+
+  <section class="content-box">
+    <h2>Step-by-Step Methodology</h2>
+    <div class="steps-dropdown">
+  
+      <div class="step-item">
+        <h3>Live Acoustic Data Ingestion</h3>
+        <ul class="step-content">
+          <li>Seamless integration with Reson 7125, T20, T51, EM2040, EM710, EM3002, EM302, EM122, and EK60, EK80, ME70 systems</li>
+          <li>Time-synchronized input with navigation, attitude, and sound velocity data</li>
+          <li>Processing occurs in real time, with no interruption to acquisition</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Intelligent Preprocessing & Signal Conditioning</h3>
+        <ul class="step-content">
+          <li>Beam-wise corrections for motion, refraction, and system geometry</li>
+          <li>Adaptive filtering of water-column noise and acoustic artefacts</li>
+          <li>Dynamic detection of dropouts, spikes, and multipath returns</li>
+          <li>System-aware handling of dual TX / dual RX configurations</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>AI-Based Cleaning & Adaptive Quality Control</h3>
+        <ul class="step-content">
+          <li>Automated outlier rejection for bathymetry and backscatter</li>
+          <li>Context-aware thresholds that adapt to depth, seabed roughness, and vessel speed</li>
+          <li>Continuous confidence scoring for each sounding and intensity measurement</li>
+          <li>Real-time visual feedback on data quality and coverage gaps</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>On-the-Fly Bathymetric Gridding</h3>
+        <ul class="step-content">
+          <li>Resolution adapts dynamically to depth and footprint</li>
+          <li>Seamless surface updates as new data arrive</li>
+          <li>Detection of artefacts such as line offsets, striping, or beam-edge noise</li>
+          <li>Instant assessment of coverage completeness and overlap</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Real-Time Backscatter Processing & Normalisation</h3>
+        <ul class="step-content">
+          <li>Angle, range, and transmission-loss normalisation</li>
+          <li>Correction for system-specific and survey-dependent effects</li>
+          <li>Generation of real-time backscatter mosaics</li>
+          <li>Preservation of relative intensity for sediment and texture analysis</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Seabed Insight & Preliminary Classification</h3>
+        <ul class="step-content">
+          <li>Identification of textural contrasts and seabed boundaries</li>
+          <li>Highlighting of anomalous intensity zones</li>
+          <li>Optional clustering of backscatter responses for preliminary substrate discrimination</li>
+          <li>Supports rapid decision-making while still offshore</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Delivery & Survey Feedback</h3>
+        <ul class="step-content">
+          <li>Export of clean bathymetric grids and backscatter mosaics</li>
+          <li>Continuous QC layers and confidence maps</li>
+          <li>Reduced dependency on heavy post-processing</li>
+          <li>Outputs suitable for hydrography, engineering, habitat mapping, and geoscience workflows</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  
+  
+    
+  <div class="flex-row">
+    <div class="result-image">
+      <div class="placeholder-img">
+        <span>[ Result Map/Image ]</span>
+      </div>
+    </div>
+    <!-- <div class="business-value">
+      <h3>Why Businesses Should Use This</h3>
+      <p>Reduces exploration risk by 40%, cuts down operational costs of manual surveys, and provides high-accuracy targeting for drilling operations.</p>
+    </div> -->
+  </div>
+
+  <section class="cta">
+      <button class="btn-secondary" (click)="goToIndustries()">
+          Explore Other Industries
+        </button>
+        <button class="btn-primary" (click)="goToHowWeWork()">
+          Want to work with Lizo AI?
+        </button>
+  </section>
+</div>

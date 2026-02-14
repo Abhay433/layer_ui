@@ -1,0 +1,104 @@
+<div class="mining-page">
+  <section class="hero">
+    <button (click)="goBack()" class="back-link"> ← Back to Mining Overview</button>
+    <h1>Mineral Prospectivity Mapping</h1>
+    <!-- <p>Protecting lives and assets through real-time slope stability and environmental hazard alerts.</p> -->
+  </section>
+
+  <section class="content-box">
+    <div class="workflow-overview">
+      <h2>Workflow Overview</h2>
+      <p>LizoAI streamlines mineral exploration by integrating multi-source data to generate predictive mineral 
+        prospectivity maps. By training advanced AI models on integrated geophysical, geological, and satellite
+        datasets, the platform correlates hidden patterns with known deposits to identify high-potential target 
+        zones with measurable confidence..
+      </p>
+    </div>
+  </section>
+
+  <div class="flex-row">
+    <div class="video-section">
+      <div class="placeholder-video">
+        <span>[ Early Warning Alert Simulation ]</span>
+      </div>
+    </div>
+    <!-- <div class="summary-section">
+      <h3>Summarised Workflow</h3>
+      <ul>
+        <li>Satellite-based ground displacement monitoring (InSAR).</li>
+        <li>Integration with on-site Geotechnical sensors.</li>
+        <li>AI-driven automated risk scoring for tailings dams.</li>
+        <li>Real-time SMS/Email alerts for safety officers.</li>
+      </ul>
+    </div> -->
+  </div>
+
+  <section class="content-box">
+    <h2>Step-by-Step Methodology</h2>
+  
+    <div class="steps-dropdown">
+  
+      <div class="step-item">
+        <h3>Data Ingestion</h3>
+        <ul class="step-content">
+          <li>Geophysical datasets (gravity, magnetic, derivatives)</li>
+          <li>Geological datasets (folds, faults, lineaments, age)</li>
+          <li>Satellite datasets (ASTER, SRTM, LANDSAT)</li>
+          <li>Known mineral occurrences (training positive samples)</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Feature Generation & Sampling</h3>
+        <ul class="step-content">
+          <li>Sample geospatial layers at locations of known deposits</li>
+          <li>Create contrasting unlabeled background samples</li>
+          <li>Label positive and negative classes</li>
+          <li>Merge into a training dataset for modeling </li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Model Training</h3>
+        <ul class="step-content">
+          <li>(Use PU Bagging (Positive–Unlabeled ensemble) model)</li>
+          <li>Train on labeled + unlabeled samples</li>
+          <li>Optionally generate correlation reports and feature evaluation </li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Prediction & Prospectivity Mapping</h3>
+        <ul class="step-content">
+          <li>Sample a regular grid across the study area</li>
+          <li>Apply the trained model to generate prospectivity scores</li>
+          <li>Visualise and refine with geospatial context (colormap, overlays) </li>
+        </ul>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <div class="flex-row">
+    <div class="result-image">
+      <div class="placeholder-img">
+        <span>[ Subsidence Risk Map ]</span>
+      </div>
+    </div>
+    <!-- <div class="business-value">
+      <h3>Why Businesses Should Use This</h3>
+      <p>Ensures zero-harm compliance, prevents massive financial losses from equipment damage, and builds trust with local communities by ensuring environmental safety.</p>
+    </div> -->
+  </div>
+
+  <section class="cta">
+      <button class="btn-secondary" (click)="goToIndustries()">
+          Explore Other Industries
+        </button>
+        
+        <button class="btn-primary" (click)="goToHowWeWork()">
+          Want to work with Lizo AI?
+        </button>
+  </section>
+</div>

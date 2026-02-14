@@ -1,0 +1,153 @@
+<div class="disaster-page">
+  <section class="hero">
+    <button (click)="goBack()" class="back-link"> ← Back to Mining Overview</button>
+    <h1>Flood Induntation Modelling</h1>
+    <!-- <p>AI-driven geological mapping and mineral prospectivity analysis.</p> -->
+  </section>
+
+  <section class="content-box">
+    <div class="workflow-overview">
+      <h2>Workflow Overview</h2>
+      <p>LizoAI models, predicts, and visualises floodplain inundation in real time by combining terrain, hydrology,
+         and live environmental forcing. Designed for riverine floods, urban flooding, emergency response, and 
+         infrastructure planning, the platform delivers high-fidelity situational awareness for mission-critical
+        flood mitigation.
+      </p>
+    </div>
+  </section>
+
+  <div class="flex-row">
+    <div class="video-section">
+      <div class="placeholder-video">
+        <span>[ Video of Workflow ]</span>
+      </div>
+    </div>
+    <!-- <div class="summary-section">
+      <h3>Summarised Workflow</h3>
+      <ul>
+        <li>Data acquisition from Sentinel-2 & Landsat-8.</li>
+        <li>Atmospheric correction and noise removal.</li>
+        <li>Mineral spectral signature matching.</li>
+        <li>Anomaly detection using Deep Learning.</li>
+      </ul>
+    </div> -->
+  </div>
+
+  <section class="content-box">
+    <h2>Step-by-Step Methodology</h2>
+    <div class="steps-dropdown">
+  
+      <div class="step-item">
+        <h3>Terrain, Hydrology & Infrastructure Data Ingestion</h3>
+        <ul class="step-content">
+          <li>High-resolution DEMs (LiDAR, photogrammetry, satellite)</li>
+          <li>River networks, catchment boundaries, and drainage systems</li>
+          <li>Land cover, impervious surfaces, and roughness coefficients</li>
+          <li>Infrastructure layers (levees, roads, buildings)</li>
+          <li>Real-time rainfall, river gauge, and climate forecasts aligned to a common hydrologic grid</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Terrain Conditioning & Hydraulic Preparation</h3>
+        <ul class="step-content">
+          <li>DEM hydrological correction and depression handling</li>
+          <li>River channel and floodplain separation</li>
+          <li>Levee and embankment enforcement</li>
+          <li>Flow direction and accumulation modelling</li>
+          <li>Resolution adaptation for urban vs rural zones</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Rainfall–Runoff & Boundary Condition Modelling</h3>
+        <ul class="step-content">
+          <li>Catchment-scale rainfall–runoff simulation</li>
+          <li>Soil moisture–dependent infiltration modelling</li>
+          <li>Dynamic boundary inflows from upstream gauges</li>
+          <li>Tide and storm surge coupling (for coastal floodplains)</li>
+          <li>Scenario-based forcing  (design storms,forecasts,extremes)</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Real-Time Inundation Simulation</h3>
+        <ul class="step-content">
+          <li>2D flow routing across floodplains </li>
+          <li> depth  velocity and extent computation</li>
+          <li>Time-stepped propagation with adaptive resolution</li>
+          <li>Continuous updating as new rainfall or gauge data arrives</li>
+          <li>Uncertainty-aware simulation envelopes</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Infrastructure Interaction & Failure Scenarios</h3>
+        <ul class="step-content">
+          <li>Overtopping and breaching of levees</li>
+          <li>Road and culvert flow constrictions</li>
+          <li>Urban flow channelisation effects</li>
+          <li>Scenario testing for infrastructure failure </li>
+          <li>Impact of mitigation measures (levees, diversions)</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Exposure, Impact & Emergency Intelligence</h3>
+        <ul class="step-content">
+          <li>Identification of inundated assets and populations</li>
+          <li>Flood depth–damage estimation</li>
+          <li>Arrival-time mapping for evacuation routing</li>
+          <li>Critical infrastructure risk prioritisation</li>
+          <li>Confidence-weighted hazard zoning</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Live Monitoring & Adaptive Re-Simulation</h3>
+        <ul class="step-content">
+          <li>Continuous ingestion of live rainfall and river data</li>
+          <li>Automatic re-simulation as conditions change</li>
+          <li>Alert escalation based on defined thresholds</li>
+          <li>Scenario branching for worst-case planning</li>
+        </ul>
+      </div>
+
+      <div class="step-item">
+        <h3>Delivery & Operational Outputs</h3>
+        <ul class="step-content">
+          <li>Real-time inundation maps and animations</li>
+          <li>Depth,velocity and hazard rasters</li>
+          <li>Emergency-ready dashboards</li>
+          <li>GIS and system exports</li>
+          <li>Audit-ready modelling lineage and documentation</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+  
+  
+  
+    
+  <div class="flex-row">
+    <div class="result-image">
+      <div class="placeholder-img">
+        <span>[ Result Map/Image ]</span>
+      </div>
+    </div>
+    <!-- <div class="business-value">
+      <h3>Why Businesses Should Use This</h3>
+      <p>Reduces exploration risk by 40%, cuts down operational costs of manual surveys, and provides high-accuracy targeting for drilling operations.</p>
+    </div> -->
+  </div>
+
+  <section class="cta">
+      <button class="btn-secondary" (click)="goToIndustries()">
+          Explore Other Industries
+        </button>
+        <button class="btn-primary" (click)="goToHowWeWork()">
+          Want to work with Lizo AI?
+        </button>
+  </section>
+</div>
