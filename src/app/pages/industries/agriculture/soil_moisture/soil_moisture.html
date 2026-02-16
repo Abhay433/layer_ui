@@ -1,74 +1,103 @@
-<div class="agriculture-page section">
-  <div class="container">
+<div class="agricultural-page">
+  <section class="hero">
+    <!-- <button (click)="goBack()" class="back-link"> ← Back to Mining Overview</button> -->
+    <!-- <p>AI-driven geological mapping and mineral prospectivity analysis.</p> -->
+  </section>
 
-    <section class="hero inner-hero">
-      <button (click)="goBack()" class="back-link">← Back to Mining Overview</button>
-      <h1 class="section-title">
-        Exploration <span class="highlight">Intelligence</span>
-      </h1>
-      <p class="section-subtitle">
-        AI-driven geological mapping and mineral prospectivity analysis.
-      </p>
-    </section>
+  <section class="content-box">
+    <div class="workflow-overview">
+      <h2>Forest Cover and Biomass Mapping</h2>
+      <p>LizoAI quantifies ecosystem health and carbon sequestration potential by synthesizing multi-sensor satellite data into high-resolution biomass maps.
+         By correlating Sentinel-1 structural data with optical vegetation indices, the platform provides precise estimates of forest density and carbon storage 
+         for climate research and environmental auditing.</p>
+    </div>
+  </section>
 
-    <section class="content-box soft-box">
-      <div class="workflow-overview">
-        <h2 class="section-mini-title">Workflow Overview</h2>
-        <p>
-          This workflow leverages hyper-spectral satellite imagery and AI models to identify subsurface mineral deposits
-          without the need for initial physical drilling, saving costs and time.
-        </p>
+  <div class="flex-row">
+    <div class="video-section">
+      <div class="placeholder-video">
+        <span>[ Video of Workflow ]</span>
       </div>
-    </section>
+    </div>
+    <!-- <div class="summary-section">
+      <h3>Summarised Workflow</h3>
+      <ul>
+        <li>Data acquisition from Sentinel-2 & Landsat-8.</li>
+        <li>Atmospheric correction and noise removal.</li>
+        <li>Mineral spectral signature matching.</li>
+        <li>Anomaly detection using Deep Learning.</li>
+      </ul>
+    </div> -->
+  </div>
 
-    <div class="flex-row">
-      <div class="video-section soft-box">
-        <div class="placeholder-video">
-          <span>Workflow Video</span>
-        </div>
-      </div>
-
-      <div class="summary-section soft-box">
-        <h3 class="section-mini-title">Summarised Workflow</h3>
-        <ul class="workflow-list">
-          <li>Data acquisition from Sentinel-2 & Landsat-8.</li>
-          <li>Atmospheric correction and noise removal.</li>
-          <li>Mineral spectral signature matching.</li>
-          <li>Anomaly detection using Deep Learning.</li>
+  <section class="content-box">
+    <h2>Step-by-Step Methodology</h2>
+    <div class="steps-dropdown">
+  
+      <div class="step-item">
+        <h3>Data Loading and Preprocessing</h3>
+        <ul class="step-content">
+          <li>Multi-sensor acquisition of Sentinel-1 (SAR) and Sentinel-2 (Optical) data</li>
+          <li>Harmonization of Sentinel-1 backscatter with radiometrically & atmospherically corrected imagery</li>
+          <li>Cloud, shadow & artifact masking for clean temporal analysis</li>
+          <li>Pixel-level alignment of Sentinel-1 backscatter and spectral data layers</li>
         </ul>
       </div>
+  
+      <div class="step-item">
+        <h3>Biomass and Canopy Computation</h3>
+        <ul class="step-content">
+          <li>Modeling the relationship between Sentinel-1 backscatter intensity and vertical tree structure</li>
+          <li>Integration of vegetation indices to capture leaf health and canopy density</li>
+          <li>Estimation of Above Ground Biomass (AGB) based on Sentinel-1 backscatter-to-height correlations</li>
+          <li>Calculation of carbon storage metrics across diverse forest classification</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Spatiotemporal Mapping</h3>
+        <ul class="step-content">
+          <li>Identification of long-term trends in forest degradation or secondary regrowth</li>
+          <li>Mapping of biomass density tiers to highlight high-carbon storage reservoirs</li>
+          <li>Detection of subtle canopy changes using multi-temporal fusion of Sentinel-1 and Sentinel-2 data</li>
+          <li>Automated segmentation of forest cover into density-based classes</li>
+        </ul>
+      </div>
+  
+      <div class="step-item">
+        <h3>Delivery and Interpretation</h3>
+        <ul class="step-content">
+          <li>Export research-ready biomass density maps with metadata</li>
+          <li>Provision of verifiable datasets for carbon credit and offset auditing</li>
+          <li>Visualization of forest health alerts for conservation management</li>
+          <li>High-resolution outputs compatible with climate modeling frameworks</li>
+        </ul>
+      </div>
+  
     </div>
-
-    <section class="content-box soft-box">
-      <h2 class="section-mini-title">Step-by-Step Methodology</h2>
-      <div class="steps">
-        <div class="step"><strong>Step 1:</strong> Satellite Data Pre-processing</div>
-        <div class="step"><strong>Step 2:</strong> Feature Extraction using Spectral Indices</div>
-        <div class="step"><strong>Step 3:</strong> Training AI models on known deposits</div>
-        <div class="step"><strong>Step 4:</strong> Generating Prospectivity Heatmaps</div>
-      </div>
-    </section>
-
-    <div class="flex-row">
-      <div class="result-image soft-box">
-        <div class="placeholder-img">
-          <span>Result Map / Output</span>
-        </div>
-      </div>
-
-      <div class="business-value soft-box">
-        <h3 class="section-mini-title">Why Businesses Should Use This</h3>
-        <p>
-          Reduces exploration risk by 40%, cuts down operational costs of manual surveys,
-          and provides high-accuracy targeting for drilling operations.
-        </p>
+  </section>
+  
+  
+  
+    
+  <div class="flex-row">
+    <div class="result-image">
+      <div class="placeholder-img">
+        <span>[ Result Map/Image ]</span>
       </div>
     </div>
-
-    <section class="cta">
-      <button class="secondary-btn" (click)="goToIndustries()">Explore Other Industries</button>
-      <button class="primary-btn" (click)="goToHowWeWork()">Want to work with Lizo AI?</button>
-    </section>
-
+    <!-- <div class="business-value">
+      <h3>Why Businesses Should Use This</h3>
+      <p>Reduces exploration risk by 40%, cuts down operational costs of manual surveys, and provides high-accuracy targeting for drilling operations.</p>
+    </div> -->
   </div>
+
+  <section class="cta">
+      <button class="btn-secondary" (click)="goToIndustries()">
+          Explore Other Industries
+        </button>
+        <button class="btn-primary" (click)="goToHowWeWork()">
+          Want to work with Lizo AI?
+        </button>
+  </section>
 </div>

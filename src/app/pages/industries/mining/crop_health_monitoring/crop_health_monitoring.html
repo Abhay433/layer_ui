@@ -1,94 +1,86 @@
 <div class="mining-page">
-  <nav class="nav-header">
-    <button (click)="goBack()" class="back-link">
-      <span class="icon">←</span> Back to Mining Overview
-    </button>
-  </nav>
+  <section class="hero">
+    
+  </section>
 
-  <header class="hero-section">
-    <div class="container">
-      <span class="tagline">Mining Innovation</span>
-      <h1>Exploration Intelligence</h1>
-      <p>Empowering geological insights through high-precision AI and satellite spectral analysis.</p>
-    </div>
-  </header>
-
-  <main class="main-grid">
-    <div class="main-content">
-      <section class="video-card">
-        <div class="card-header">
-          <h3>Workflow Demo</h3>
-          <span class="live-indicator">LIVE PREVIEW</span>
-        </div>
-        <div class="placeholder-video">
-          <div class="play-btn"></div>
-        </div>
-      </section>
-
-      <section class="overview-card">
-        <h2>Workflow Overview</h2>
-        <p>This workflow leverages hyper-spectral satellite imagery and AI models to identify subsurface mineral deposits without the need for initial physical drilling, saving costs and time.</p>
-      </section>
-    </div>
-
-    <aside class="sidebar">
-      <div class="methodology-card">
-        <h3>Methodology</h3>
-        <div class="steps-dropdown">
-          <div class="step-item">
-            <div class="step-header">
-              <span class="num">01</span>
-              <h4>Satellite Pre-processing</h4>
-            </div>
-            <div class="step-content">Data cleaning, atmospheric correction, and spectral calibration.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-header">
-              <span class="num">02</span>
-              <h4>Feature Extraction</h4>
-            </div>
-            <div class="step-content">Identifying specific mineral signatures using AI algorithms.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-header">
-              <span class="num">03</span>
-              <h4>AI Model Training</h4>
-            </div>
-            <div class="step-content">Feeding known deposit data to improve prediction accuracy.</div>
-          </div>
-          <div class="step-item">
-            <div class="step-header">
-              <span class="num">04</span>
-              <h4>Heatmap Generation</h4>
-            </div>
-            <div class="step-content">Visualizing high-probability targets for drilling.</div>
-          </div>
-        </div>
-      </div>
-    </aside>
-  </main>
-
-  <section class="impact-section">
-    <div class="impact-card">
-      <div class="impact-grid">
-        <div class="impact-item">
-          <span class="stat">40%</span>
-          <p>Risk Reduction</p>
-        </div>
-        <div class="impact-item">
-          <span class="stat">Low Cost</span>
-          <p>Survey Optimization</p>
-        </div>
-        <div class="impact-item">
-          <span class="stat">AI-Driven</span>
-          <p>High Accuracy</p>
-        </div>
-      </div>
+  <section class="content-box">
+    <div class="workflow-overview">
+      <h2>crop_health_monitoring</h2>
+    
     </div>
   </section>
 
-  <footer class="cta-area">
-    <button class="btn-secondary" (click)="goToIndustries()">Other Industries</button>
-    <button class="btn-primary" (click)="goToHowWeWork()">Partner with Lizo AI</button>
-  </footer>
+  <div class="flex-row full-width-box">
+    <div class="video-section">
+      <div class="placeholder-video">
+        <span>[ Early Warning Alert Simulation ]</span>
+      </div>
+    </div>  
+  </div>
+
+  <div class="flex-row side-by-side">
+    <div class="left-column">
+      <div class="result-image">
+        <div class="placeholder-img">
+          <span>[ Subsidence Risk Map ]</span>
+        </div>
+      </div>
+
+      <section class="cta">
+        <button class="btn-secondary" (click)="goToIndustries()">
+          Explore Other Industries
+        </button>
+        <button class="btn-primary" (click)="goToHowWeWork()">
+          Want to work with Lizo AI?
+        </button>
+      </section>
+    </div>
+
+
+    <section class="content-box side-content">
+      <h2>Step-by-Step Methodology</h2>
+    
+      <div class="steps-dropdown">
+    
+        <div class="step-item">
+          <h3>Multi-Source Data Loading</h3>
+          <ul class="step-content">
+            <li>Satellite imagery</li>
+            <li>Field observations</li>
+            <li>Existing geological maps</li>
+            <li>Geophysical datasets (if available)</li>
+          </ul>
+        </div>
+    
+        <div class="step-item">
+          <h3>Preprocessing and Data Preparation</h3>
+          <ul class="step-content">
+            <li>Data cleaning & alignment</li>
+            <li>Georeferencing & projection</li>
+            <li>Feature extraction (terrain, lithology, structures)</li>
+          </ul>
+        </div>
+    
+        <div class="step-item">
+          <h3>Modeling and Interpretation</h3>
+          <ul class="step-content">
+            <li>AI-assisted pattern recognition (supervised & unsupervised ML models)</li>
+            <li>Integration with geophysical and geological data</li>
+            <li>Structural and stratigraphic interpretation</li>
+            <li>Iterative expert validation</li>
+          </ul>
+        </div>
+    
+        <div class="step-item">
+          <h3>Decision-Ready Outputs</h3>
+          <ul class="step-content">
+            <li>High-resolution geological map</li>
+            <li>Layered map (lithology, structures, faults)</li>
+            <li>Metadata & confidence metrics</li>
+            <li>Downloadable/printable formats</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

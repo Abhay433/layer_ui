@@ -13,8 +13,9 @@
   }
   
   .workflow-overview h2{
-    text-align: left;
-    padding: auto;
+    text-align: center;
+    margin-top: 5px;
+    
     
   }
   
@@ -45,6 +46,13 @@
   transition: all 0.3s ease;
   font-size: 17px;
 }
+
+/* .video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
 
 .content-box:hover, .video-section:hover, .summary-section:hover {
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);

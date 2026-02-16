@@ -12,8 +12,9 @@
 }
 
 .workflow-overview h2{
-  text-align: left;
-  padding: auto;
+  text-align: center;
+  margin-top: 5px;
+  
   
 }
 
@@ -43,7 +44,9 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.04);
   transition: all 0.3s ease;
   font-size: 17px;
+  width: 100%;
 }
+
 
 .content-box:hover, .video-section:hover, .summary-section:hover {
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
@@ -53,9 +56,57 @@
 .flex-row {
   max-width: 1100px;
   margin: 40px auto;
-  display: grid;
-  grid-template-columns: 1.6fr 0.4fr;
+  display: flex;
+  /* grid-template-columns: 1.6fr 0.4fr; */
+  flex-direction: column;
   gap: 30px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row; /* Row direction taaki side-by-side aaye */
+  align-items: stretch; /* Upar se align rahein */
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px; /* Width thodi increase ki taaki dono fit aa sakein */
+  margin: 40px auto;
+  /* min-height: 800px; */
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: row; /* Row direction taaki side-by-side aaye */
+  align-items: flex-start; /* Upar se align rahein */
+  justify-content: center;
+  gap: 40px;
+  max-width: 1300px; /* Width thodi increase ki taaki dono fit aa sakein */
+  margin: 40px auto;
+  /* min-height: 800px; */
+}
+
+.left-column {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Image aur buttons ke beech ka gap */
+}
+
+.side-by-side .result-image {
+  flex: none; /* 50% area lega */
+  width: 100%;
+}
+
+/* Text box (Methodology) ki width fix karein */
+.side-by-side .side-content {
+  flex: 1; /* 50% area lega */
+  margin: 0; /* Extra margins hatane ke liye */
+  width: auto;
+  height: 100%;
+}
+
+.full-width-box {
+  grid-template-columns: 1fr !important; /* Grid ko single column kar dega */
+  max-width: 1000px; /* Aap isse badha bhi sakte hain (e.g., 1200px) */
 }
 
 /* PLACEHOLDERS */
@@ -68,6 +119,11 @@
   justify-content: center;
   color: #64748b;
   border: 1px solid #e5e7eb;
+}
+
+.placeholder-img {
+  height: 100%; /* Parent ki height ke barabar */
+  min-height: 470px; /* Minimum height jo aap chahte hain */
 }
 
 .placeholder-video::after {
@@ -88,7 +144,7 @@
 .step-item {
   background: #f8fafc;
   border-radius: 16px;
-  border-left: 4px solid #16a34a;
+  border-left: 4px solid #000000;
   overflow: hidden;
   transition: 0.3s ease;
 }
@@ -152,11 +208,16 @@
   box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
 }
 .cta {
-  margin-top: 80px;
+  /* margin-top: 80px;
   margin: 30px auto 30px; 
   display: flex;
-  justify-content:space-around;
-  gap: 16px;
+  justify-content:;
+  gap: 16px; */
+  margin: 0; /* Extra margins hata dein kyunki wrapper gap handle kar raha hai */
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  padding-bottom: 25px;
 }
 
 .btn-secondary {
@@ -178,5 +239,17 @@
 @media (max-width: 900px) {
   .flex-row {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* Responsive: Mobile par wapas ek ke niche ek kar dega */
+@media (max-width: 900px) {
+  .flex-row.side-by-side {
+    flex-direction: column;
+  }
+  .side-by-side .result-image, 
+  .side-by-side .side-content {
+    width: 100%;
   }
 }

@@ -9,4 +9,15 @@ import { RouterModule } from '@angular/router'; // 👈 Ye zaroori hai
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {}
+export class FooterComponent {
+
+  isModalOpen = false;
+  
+  openCareersModal() {
+    this.isModalOpen = true;
+  }
+  
+  closeModal() {
+    this.isModalOpen = false;
+  }
+}

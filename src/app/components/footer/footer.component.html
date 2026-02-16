@@ -19,17 +19,21 @@
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#features">Features</a></li>
-        <!-- <li><a href="#industries">Industries</a></li> -->
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#features">How We Work</a></li>
-        <li><a href="#features">Carrers</a></li>
+        <li><a routerLink="/about-us">About Us</a></li>
+        <li><a href="/how-we-work">How We Work</a></li>
+        <li><a (click)="openCareersModal()" style="cursor: pointer;">Careers</a></li>
 
-
-
+        <div class="modal-overlay" *ngIf="isModalOpen">
+          <div class="modal-content">
+            <span class="close-btn" (click)="closeModal()">&times;</span>
+            <h2>Join Our Team!</h2>
+            <p>We are currently looking for passionate innovators.</p>
+            <p>Send your CV at: <b>careers&#64;layerzeroinnovations.com</b></p>
+            <button class="cta-btn" (click)="closeModal()">Close</button>
+          </div>
+        </div>
       </ul>
     </div>
-
-    
 
     <div class="footer-section">
       <h4>Industries</h4>
@@ -43,26 +47,17 @@
       </ul>
     </div>
 
-    <!-- <div class="footer-section">
-      <h4>Get in Touch</h4>
-      <p class="contact-text">help&#64;layerzeroinnovations.com</p>
-      <p class="contact-text">Indore, India</p>
-    </div> -->
+    <div class="footer-section">
+      <h4>Work Flows</h4>
+      <ul>
+        <li><a routerLink="/industries/mining/geological_mapping">Geological Mapping</a></li>
+        <li><a routerLink="/industries/disaster-management/glof">GLOF</a></li>
+        <li><a routerLink="/industries/disaster-management/flood_induntation">Flood Induntation Modelling</a></li>
+      </ul>
+    </div>
   </div>
 
-  <div class="footer-section">
-    <h4>Work Flows</h4>
-    <ul>
-      <li><a href="#home">Geological Mapping</a></li>
-      <li><a href="#features">GLOF</a></li>
-      <!-- <li><a href="#industries">Industries</a></li> -->
-      <li><a href="#about">Path Optimization</a></li>
-      <li><a href="#features">Flood Induntation Modelling</a></li>
-
-
-
-    </ul>
-  </div>
+  
 
   <div class="footer-bottom">
     <div class="bottom-container">
