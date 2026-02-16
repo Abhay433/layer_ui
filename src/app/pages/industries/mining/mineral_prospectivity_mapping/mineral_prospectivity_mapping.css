@@ -253,3 +253,24 @@
     width: 100%;
   }
 }
+
+.prospectivity-img {
+  background-image: url("/assets/industryimage/Mineral_prospectivity.jpg");
+  
+  background-size:contain;
+  background-position: cover;
+  background-repeat: no-repeat;
+  /* position: relative; */
+
+}
+
+
+
+/* Caption ko upar lao */
+.prospectivity-img span {
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+}

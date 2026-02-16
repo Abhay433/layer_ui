@@ -1,7 +1,5 @@
 <div class="agricultural-page">
   <section class="hero">
-    <!-- <button (click)="goBack()" class="back-link"> ← Back to Mining Overview</button> -->
-    <!-- <p>AI-driven geological mapping and mineral prospectivity analysis.</p> -->
   </section>
 
   <section class="content-box">
@@ -13,24 +11,33 @@
     </div>
   </section>
 
-  <div class="flex-row">
+  <div class="flex-row full-width-box">
     <div class="video-section">
       <div class="placeholder-video">
-        <span>[ Video of Workflow ]</span>
+        <span>[ Early Warning Alert Simulation ]</span>
       </div>
-    </div>
-    <!-- <div class="summary-section">
-      <h3>Summarised Workflow</h3>
-      <ul>
-        <li>Data acquisition from Sentinel-2 & Landsat-8.</li>
-        <li>Atmospheric correction and noise removal.</li>
-        <li>Mineral spectral signature matching.</li>
-        <li>Anomaly detection using Deep Learning.</li>
-      </ul>
-    </div> -->
+    </div>  
   </div>
 
-  <section class="content-box">
+  <div class="flex-row side-by-side">
+    <div class="left-column">
+      <div class="result-image">
+        <div class="placeholder-img">
+          <span>[ Subsidence Risk Map ]</span>
+        </div>
+      </div>
+
+      <section class="cta">
+        <button class="btn-secondary" (click)="goToIndustries()">
+          Explore Other Industries
+        </button>
+        <button class="btn-primary" (click)="goToHowWeWork()">
+          Want to work with Lizo AI?
+        </button>
+      </section>
+    </div>
+
+  <section class="content-box side-content">
     <h2>Step-by-Step Methodology</h2>
     <div class="steps-dropdown">
   
@@ -80,24 +87,5 @@
   
   
     
-  <div class="flex-row">
-    <div class="result-image">
-      <div class="placeholder-img">
-        <span>[ Result Map/Image ]</span>
-      </div>
-    </div>
-    <!-- <div class="business-value">
-      <h3>Why Businesses Should Use This</h3>
-      <p>Reduces exploration risk by 40%, cuts down operational costs of manual surveys, and provides high-accuracy targeting for drilling operations.</p>
-    </div> -->
-  </div>
 
-  <section class="cta">
-      <button class="btn-secondary" (click)="goToIndustries()">
-          Explore Other Industries
-        </button>
-        <button class="btn-primary" (click)="goToHowWeWork()">
-          Want to work with Lizo AI?
-        </button>
-  </section>
 </div>
