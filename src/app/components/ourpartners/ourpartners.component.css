@@ -1,35 +1,112 @@
-.partners-section {
-    padding: 80px 20px;
-    background-color: #d6d6d6;
-    text-align: center;
+:host {
+  display: block;
+  /* Scientific Palette: High contrast, neutral grays */
+  --science-blue: #0c4a6e; 
+  --ink-black: #0f172a;
+  --border-subtle: #cbd5e1;
+  --bg-canvas: #ffffff;
+}
+
+.research-collaborations {
+  padding: 80px 0;
+  background-color: #d6d6d6;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink-black);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  /* Padding-top is set to 0 to keep it upward */
+  padding: 0 0 15px 0; 
+}
+
+.title {
+  /* Increased size for more impact */
+  font-size: 2.25rem; 
+  font-weight: 700;
+  color: var(--ink-accent);
+  margin: 0;
+  /* Tracking (letter-spacing) is key for a scientific/high-end vibe */
+  letter-spacing: -0.03em; 
+  text-transform: capitalize;
+}
+
+.label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--science-blue);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.divider {
+  width: 40px;
+  height: 1px; /* Thinner line for a more precise look */
+  background: var(--science-blue);
+  margin: 20px auto 0;
+}
+
+/* Grid: The "Laboratory Table" look */
+.collaboration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Technical grid lines using border-collapse logic */
+  border-top: 1px solid var(--border-subtle);
+  border-left: 1px solid var(--border-subtle);
+}
+
+.grid-item {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+  border-right: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);  
+}
+
+.partner-logo {
+  max-width: 80%;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  /* Resetting filter and opacity for full color display */
+  filter: none !important; 
+  opacity: 1 !important;
+}
+
+/* Subtle Interaction: Blue tint on hover instead of a heavy shadow */
+.grid-item:hover {
+  background-color: #f8fafc;
+}
+
+.grid-item:hover .partner-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .collaboration-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .section-title {
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: #64748b;
-    margin-bottom: 50px;
-  }
-  
-  .partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  .partner-logo img {
-    height: 50px; /* Logo height fix */
-    width: auto;
-    filter: grayscale(100%); /* Shuru mein black & white */
-    opacity: 0.6;
-    transition: all 0.3s ease;
-  }
-  
-  .partner-logo img:hover {
-    filter: grayscale(0%); /* Hover par color (agar real logo color ho) */
-    opacity: 1;
-    transform: scale(1.1);
-  }
+}
