@@ -71,34 +71,35 @@
       <h3>Let's Build Something Great</h3>
     
       <form (ngSubmit)="contactForm.form.valid && onSubmit(contactForm)" #contactForm="ngForm">
+  <div class="form-row">
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" name="full_name" placeholder="E.g. Steve Rogers" [(ngModel)]="form.full_name" required #nameRef="ngModel">
+      <small *ngIf="nameRef.invalid && (nameRef.dirty || nameRef.touched || contactForm.submitted)" class="error-text">Name is required</small>
+    </div>
+
+    <div class="form-group">
+      <label>Company Name</label>
+      <input type="text" name="company" placeholder="E.g. Stark Industries" [(ngModel)]="form.company">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Email Address</label>
+    <input type="email" name="email" placeholder="steve@company.com" [(ngModel)]="form.email" required email #emailRef="ngModel">
+    <small *ngIf="emailRef.invalid && (emailRef.dirty || emailRef.touched || contactForm.submitted)" class="error-text">Please enter a valid business email</small>
+  </div>
+
+  <div class="form-group">
+    <label>How can we help you?</label>
+    <textarea name="message" rows="4" placeholder="Tell us about your project or use case..." [(ngModel)]="form.message" required #msgRef="ngModel"></textarea>
+    <small *ngIf="msgRef.invalid && (msgRef.dirty || msgRef.touched || contactForm.submitted)" class="error-text">Please share details</small>
+  </div>
+
+  <button type="submit" class="submit-btn-gradient">Send Message 🚀</button>
+</form>
     
-        <div class="form-row">
-          <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="E.g. Steve Rogers" [(ngModel)]="form.full_name" required #nameRef="ngModel">
-            <small *ngIf="nameRef.invalid && contactForm.submitted" class="error-text">Name is required</small>
-          </div>
-    
-          <div class="form-group">
-            <label>Company Name</label>
-            <input type="text" name="company" placeholder="E.g. Stark Industries" [(ngModel)]="form.company" [(ngModel)]="form.company">
-          </div>
-        </div>
-    
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" name="email" placeholder="steve@company.com" [(ngModel)]="form.email" required email #emailRef="ngModel">
-          <small *ngIf="emailRef.invalid && contactForm.submitted" class="error-text">Please enter a valid business email</small>
-        </div>
-    
-        <div class="form-group">
-          <label>How can we help you?</label>
-          <textarea name="message" rows="4" placeholder="Tell us about your project or use case..." [(ngModel)]="form.message" required #msgRef="ngModel"></textarea>
-          <small *ngIf="msgRef.invalid && contactForm.submitted" class="error-text">Please share some details about your requirement</small>
-        </div>
-    
-        <button type="submit" [disabled]="contactForm.invalid" class="submit-btn-gradient">Send Message 🚀</button>
-      </form>
+         
     </div>  
 </div>
 

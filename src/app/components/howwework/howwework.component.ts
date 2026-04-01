@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SupabaseService } from '../../services/supabase.service';
+// import { SupabaseService } from '../../services/supabase.service';
+import { FirebaseService } from '../../firebase.service';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-howwework',
@@ -11,9 +13,13 @@ import { SupabaseService } from '../../services/supabase.service';
   templateUrl: './howwework.component.html',
   styleUrl: './howwework.component.css'
 })
-export class HowweworkComponent {
+export class HowweworkComponent implements OnInit{
 
-  constructor(private router: Router, private supabaseService: SupabaseService) {}
+  constructor(private router: Router, private firebaseService: FirebaseService) {}
+
+  ngOnInit() {
+    emailjs.init('FzsZ2DmJYMxCsNUOk'); 
+  }
 
   // Purane HTML ke hisaab se fields
   form = {
@@ -30,38 +36,53 @@ export class HowweworkComponent {
     ).join(' ');
   }
 
-  async onSubmit(contactForm: any) {
+async onSubmit(contactForm: any) {
+  console.log("!!! FUNCTION TRIGGERED !!!"); 
 
-    // 1. Data Clean-up (Capitalize Names & Company)
-    this.form.full_name = this.toTitleCase(this.form.full_name);
-    this.form.company = this.toTitleCase(this.form.company);
-    this.form.email = this.form.email.toLowerCase().trim(); // Email hamesha lowercase
-
-    console.log('Form submitting:', this.form);
-
-    const { error } = await this.supabaseService.saveContact(this.form);
-
-    if (error) {
-      console.error('Database error:', error.message);
-      
-      // Professional Error Handling
-      if (error.message.includes('unique_email')) {
-        alert('This email has already been submitted. Our team will get back to you soon.');
-      } else {
-        alert('We encountered a technical issue while saving your details. Please try again later.');
-      }
-    } else {
-      // Professional Success Message
-      alert('Thank you for reaching out! Your message has been successfully received. Our team will contact you shortly. 🚀');
-      
-      // Form reset logic
-      contactForm.resetForm(); 
-      this.form = { full_name: '', email: '', company: '', message: '' };
-    }
+  // Check if form is valid in logic too
+  if (contactForm.invalid) {
+    console.log("Form is invalid!");
+    return;
   }
 
-  
-  
+  this.form.full_name = this.toTitleCase(this.form.full_name);
+  this.form.company = this.toTitleCase(this.form.company);
+  this.form.email = this.form.email.toLowerCase().trim();
+
+  try {
+    const res = await this.firebaseService.saveContact({
+      ...this.form,
+      createdAt: new Date()
+    });
+
+    if (!res.success) throw res.error;
+    console.log('Firebase Save Success:', res.id);
+
+    const templateParams = {
+      name: this.form.full_name,  
+      email: this.form.email,    
+      message: this.form.message,  
+      title: 'New Inquiry from Website',        
+      time: new Date().toLocaleString() 
+    };
+
+    const emailRes = await emailjs.send(
+      'service_uquqhya', 
+      'template_hsvcm5m', 
+      templateParams
+    );
+
+    console.log("EmailJS Success:", emailRes.status, emailRes.text);
+    alert('Thank you! Your message has been sent. 🚀');
+
+    contactForm.resetForm();
+    this.form = { full_name: '', email: '', company: '', message: '' };
+
+  } catch (error: any) {
+    console.error('Submission Error:', error);
+    alert('Something went wrong. Please check the console.');
+  }
+}
   goToIndustries() {
     this.router.navigate(['/'], { fragment: 'industries-section' });
   }
